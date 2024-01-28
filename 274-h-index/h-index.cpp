@@ -8,7 +8,6 @@ public:
         int ans=0;
         int count=0;
         while(j>=0){
-            cout<<"hi";
             if(citations[j]-1<=j){
                 ans = max(ans,citations[j]);
             }
