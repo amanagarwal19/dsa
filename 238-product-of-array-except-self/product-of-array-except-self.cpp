@@ -6,7 +6,6 @@ public:
         ans[0] = nums[0];
         for(int i=1;i<n;i++)
             ans[i] = ans[i-1]*nums[i];
-        cout<<"\n";
         for(int i=n-2;i>=0;i--)
             nums[i] = nums[i+1]*nums[i];
 
