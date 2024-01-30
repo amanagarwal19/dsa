@@ -7,10 +7,12 @@ public:
         int totalProfit=0;
         int maximum = prices[n-1];
         for(int i=n-2;i>=0;i--){
-            if(prices[i] < maximum)
-                totalProfit = max(totalProfit,(maximum-prices[i]));
-            else
-                maximum = prices[i];
+            totalProfit = max(totalProfit,maximum - min(maximum,prices[i]));
+            maximum = max(maximum, prices[i]);
+            // if(prices[i] < maximum)
+            //     totalProfit = max(totalProfit,(maximum-prices[i]));
+            // else
+            //     maximum = prices[i];
         }
         return totalProfit;
     }
