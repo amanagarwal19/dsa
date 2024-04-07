@@ -15,15 +15,10 @@ class Solution:
                     row0[j] = 0;
                     col0[i] = 0;
 
-        for j in range(n):
-            if(row0[j]==0):
-                for i in range(m):
-                    matrix[i][j] = 0;
-        
         for i in range(m):
-            if(col0[i]==0):
-                for j in range(n):
-                    matrix[i][j]=0;
+            for j in range(n):
+                if(row0[j]==0 or col0[i]==0):
+                    matrix[i][j]=0
 
 
         
