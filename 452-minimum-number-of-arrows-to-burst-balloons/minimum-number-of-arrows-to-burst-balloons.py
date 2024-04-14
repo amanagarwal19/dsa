@@ -1,13 +1,7 @@
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
-        # ---   ---------                     -----
-        #   -----     ------------
-        #      --------   ----   ------ 
-        #   --------          ----------
-        
-        # 7,12
-        # 10,16
 
+        # Sorting absed on ending time to cover max balloons
         list.sort(points,key=lambda x: x[1])
         print(points) 
         currInterval = points[0]
